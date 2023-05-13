@@ -574,17 +574,17 @@ body.active { overflow: hidden; }
 /*-----------------------------------*\
   #PROMO
 \*-----------------------------------*/
-
-.promo-card {
+.promo-card
+.overlay-burger {
   position: relative;
-  background-color: var(--white);
+  background-color: var(--deep-saffron);
   text-align: center;
   padding: 40px 30px;
-  box-shadow: var(--shadow-2);
+  /* box-shadow: var(--shadow-2); */
   z-index: 1;
 }
 
-.promo-card::after {
+/* .promo-card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -594,28 +594,28 @@ body.active { overflow: hidden; }
   transform-origin: bottom;
   z-index: -1;
   transition: var(--transition-1);
-}
+} */
 
-.promo-card:hover::after {
+/* .promo-card::after {
   clip-path: var(--clip-path-2);
   transform: scaleY(1);
-}
+} */
 
 .promo-card .card-icon svg { margin-inline: auto; }
 
-.promo-card:hover .card-icon path { fill: var(--white); }
+.promo-card .card-icon path { fill: var(--white); }
 
-.promo-card:hover :is(.card-title, .card-text) { color: var(--white); }
+.promo-card :is(.card-title, .card-text, .overlay-burger) { color: var(--white); } 
 
 .promo-card .card-title {
   margin-block: 15px;
   transition: var(--transition-1);
 }
 
-.promo-card .card-text {
+/* .promo-card .card-text {
   margin-block-end: 15px;
   transition: var(--transition-1);
-}
+} */
 
 .promo-card .card-banner {
   max-width: max-content;
@@ -626,9 +626,28 @@ body.active { overflow: hidden; }
 .promo-item {
   min-width: 100%;
   scroll-snap-align: start;
+  background-color: var(--deep-saffron);
+
 }
 
 
+/* .overlay-burger {
+  position: absolute;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+} */
+
+/* When you mouse over the container, fade in the overlay title */
+/* .promo-card:hover .overlay-burger {
+  opacity: 1;
+} */
 
 .slider {
   /* line them up horizontally */
@@ -841,22 +860,9 @@ body.active { overflow: hidden; }
   box-shadow: none;
 }
 
-.overlay-burger {
-  position: absolute;
-  bottom: 0;
-  color: #f1f1f1;
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
 
-/* When you mouse over the container, fade in the overlay title */
-.promo-card:hover .overlay-burger {
-  opacity: 1;
+#shakes > li{
+  color:aqua;
 }
 
 
@@ -1117,7 +1123,7 @@ body.active { overflow: hidden; }
   bottom: -11px;
   left: -160px;
   width: 160px;
-  animation: running-cycle 8s linear infinite;
+  animation: running-cycle 9s linear infinite;
 }
 
 @keyframes running-cycle {
@@ -1645,6 +1651,77 @@ textarea.input-field {
     width: 80%; 
    }
 
+/* PROMO */
+
+.promo-card {
+  position: relative;
+  background-color: var(--white);
+  text-align: center;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.promo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--deep-saffron);
+  clip-path: var(--clip-path-1);
+  transform: scaleY(0.3);
+  transform-origin: bottom;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.promo-card:hover::after {
+  clip-path: var(--clip-path-2);
+  transform: scaleY(1);
+}
+
+.promo-card .card-icon svg { margin-inline: auto; }
+
+.promo-card:hover .card-icon path { fill: var(--white); }
+
+.promo-card:hover :is(.card-title, .card-text) { color: var(--white); }
+
+.promo-card .card-title {
+  margin-block: 15px;
+  transition: var(--transition-1);
+}
+
+.promo-card .card-text {
+  margin-block-end: 15px;
+  transition: var(--transition-1);
+}
+
+.promo-card .card-banner {
+  max-width: max-content;
+  margin-inline: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.promo-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+.overlay-burger {
+  position: absolute;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  /* color: white; */
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.promo-card:hover .overlay-burger {
+  opacity: 1;
+}
 
 
   /**
@@ -1689,7 +1766,7 @@ textarea.input-field {
    * FOOTER
    */
 
-  .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1fr; }
   .footer-brand{
     width:70%;
     display:flex;
@@ -1778,7 +1855,7 @@ textarea.input-field {
    * FOOTER
    */
 
-  .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1fr; 
     /* border:2px white solid; */
     
   }
