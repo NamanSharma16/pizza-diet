@@ -208,7 +208,7 @@ body.active { overflow: hidden; }
 .btn {
   background-color: var(--bg-color, var(--deep-saffron));
   color: var(--white);
-  font-family: var(--ff-rubik);
+  font-family: var(--ff-montserrat);
   font-size: var(--fs-4);
   font-weight: var(--fw-500);
   height: var(--height, 45px);
@@ -262,7 +262,7 @@ body.active { overflow: hidden; }
 
 .section-divider.gray::after { background-image: url("../images/shape-grey.png"); }
 
-.w-100 { width: 100%; opacity: 0.6;}
+.w-100 { width: 100%; opacity: 1; margin-bottom:30px;}
 .w-100x {width: 100%; height: 250px; opacity: 1;}
 
 .has-scrollbar {
@@ -543,13 +543,17 @@ body.active { overflow: hidden; }
 .hero-subtitle {
   color: var(--dark-orange);
   font-family: var(--ff-shadows-into-light);
-  font-size: var(--fs-3);
-  letter-spacing: 1px;
-  margin-block-end: 25px;
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 0.5px;
+  margin-block-end: 1px;
 }
 
 .hero-title {
-  color: var(--champagne-pink);
+  color: var(--white);
+  font-family: var(--ff-montserrat);
+  font-size: 5rem;
+  font-weight: bolder;
   max-width: 12ch;
   margin-inline: auto;
 }
@@ -561,7 +565,12 @@ body.active { overflow: hidden; }
   margin-inline: auto;
 }
 
-.hero .btn { margin-inline: auto; margin-top: 5px;}
+.hero .btn { 
+  margin-inline: auto; 
+  margin:10px;
+  width:200px; 
+  font-size: 2rem;
+}
 
 .hero .btn:is(:hover, :focus) {
   background-color: var(--white);
@@ -771,6 +780,11 @@ body.active { overflow: hidden; }
   gap: 10px;
   /* border:red 5px solid; */
 }
+.food-menu-lis {
+  display: grid;
+  gap: 10px;
+  /* border:red 5px solid; */
+}
 
 .food-menu-card {
   background-color: var(--champagne-pink_20);
@@ -819,12 +833,14 @@ body.active { overflow: hidden; }
 }
 
 .food-menu-card .wrapper {
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
-  height: 110px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-content: center; */
+  text-align: center;
+  /* height: 110px; */
   gap: 15px;
   margin-block: 20px 10px;
+  /* padding-left:10px; */
 }
 
 .food-menu-card .category {
@@ -861,22 +877,11 @@ body.active { overflow: hidden; }
   box-shadow: none;
 }
 
-.addon{
-  display: flex; 
-  justify-content: center; 
-  /* background-color: brown;  */
-  background-image: linear-gradient(90deg, white, brown, white);
-  width: auto;
-}
-.addon > img{
-  max-width: 100%;
-width: 500px;
-}
 
-
-#drinks{
+#shakes{
   background-image: url('../images/drinks_bg.jpg'); 
   background-position: center;
+  opacity: 0.8;
 }
 
 
@@ -1444,24 +1449,6 @@ textarea.input-field {
 
 
 
-  /**
-   * ABOUT
-   */
-
-  .about .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
-  .about { text-align: left; }
-
-  .about .section-title { margin-block-start: 0; }
-
-  .about :is(.section-title, .btn) { margin-inline: 0; }
-
-  .about-item { justify-content: flex-start; }
-
 
 
   /**
@@ -1470,7 +1457,7 @@ textarea.input-field {
 
   .food-menu-list { grid-template-columns: 1fr 1fr; }
 
-  .food-menu-card :is(.wrapper, .price-wrapper) { justify-content: center; }
+  .food-menu-card :is(.wrapper, .price-wrapper) { justify-content: stretch; align-content: center;}
 
   .food-menu-card .card-title { text-align: center;}
  
@@ -1595,8 +1582,17 @@ textarea.input-field {
 
   .h2 { --fs-1: 4.2rem; }
 
-
-
+  .addons{
+    
+    /* border: 2px red solid; */
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 50px;
+    
+  }
+  .addons .h3{
+    margin-bottom: 20px;
+  }
   /**
    * HEADER
    */
@@ -1636,12 +1632,14 @@ textarea.input-field {
     display: grid;
     align-items: center;
   }
+  
 
-  .hero-subtitle { --fs-3: 3.2rem; }
+  .hero-subtitle { font-size: 5rem; }
 
   .hero-title {
-    --fs-1: 7rem;
-    letter-spacing: -2.5px;
+    font-size: 10rem;
+    font-weight: bolder;
+    /* letter-spacing: -2.5px; */
   }
 
   .hero-text { font-size: var(--fs-3); }
@@ -1662,9 +1660,10 @@ textarea.input-field {
    */
 
   .food-menu-list { grid-template-columns: repeat(4, 1fr); }
+  .food-menu-lis { grid-template-columns: repeat(2, 1fr); }
 
   .food-menu-card { 
-    width: 80%; 
+    /* width: 80%;  */
    }
 
 /* PROMO */
