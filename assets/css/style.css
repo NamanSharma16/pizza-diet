@@ -177,7 +177,8 @@ body.active { overflow: hidden; }
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 15px; }
+.container { padding-inline: 15px;
+ }
 .responsive{
   width:100%;
   height:auto;
@@ -560,7 +561,7 @@ body.active { overflow: hidden; }
   margin-inline: auto;
 }
 
-.hero .btn { margin-inline: auto; }
+.hero .btn { margin-inline: auto; margin-top: 5px;}
 
 .hero .btn:is(:hover, :focus) {
   background-color: var(--white);
@@ -772,9 +773,10 @@ body.active { overflow: hidden; }
 }
 
 .food-menu-card {
-  /* background-color: var(--black); */
+  background-color: var(--champagne-pink_20);
   /* color:white; */
   padding: 10px;
+  margin-bottom: 10px;
   box-shadow: var(--shadow-2);
 }
 .food-menu-card:hover {
@@ -818,8 +820,9 @@ body.active { overflow: hidden; }
 
 .food-menu-card .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
+  height: 110px;
   gap: 15px;
   margin-block: 20px 10px;
 }
@@ -1164,9 +1167,11 @@ width: 500px;
   gap: 5px;
   align-self:flex-end;
 }
-.email{
+.emailId{
+display:flex;
+align-items: center; 
 text-align:right;
-border: 2px lightblue solid;
+/* border: 2px lightblue solid; */
 }
 
 .social-link {
@@ -1465,7 +1470,7 @@ textarea.input-field {
 
   .food-menu-list { grid-template-columns: 1fr 1fr; }
 
-  .food-menu-card :is(.wrapper, .price-wrapper) { justify-content: flex-start; }
+  .food-menu-card :is(.wrapper, .price-wrapper) { justify-content: center; }
 
   .food-menu-card .card-title { text-align: center;}
  
