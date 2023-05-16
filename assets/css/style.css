@@ -553,6 +553,8 @@ body.active { overflow: hidden; }
 .hero-title {
   color: var(--white);
   font-family: var(--ff-montserrat);
+  font-weight: 1700;
+  font-style: italic;
   font-size: 5rem;
   font-weight: bolder;
   max-width: 12ch;
