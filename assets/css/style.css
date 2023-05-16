@@ -101,8 +101,8 @@
 
 li { list-style: none; }
 
-a {
-  text-decoration: none;
+a, a:hover {
+  text-decoration: none !important;
   color: inherit;
 }
 
@@ -761,15 +761,15 @@ body.active { overflow: hidden; }
 .filter-btn {
   background-color: var(--white);
   color: var(--color, var(--rich-black-fogra-29));
-  /* font-family: var(--ff-derif); */
   font-family: var(--ff-rubik);
   font-weight: var(--fw-500);
   padding: 5px 20px;
   border: 3px solid rgba(255, 166, 98, 0.974);
-  border-radius:50%;
+  border-radius:10px;
 }
 
-.filter-btn.active {
+.filter-btn.active,
+.filter-btn:hover {
   background-color: var(--deep-saffron);
   --color: var(--white);
   --border-color: var(--deep-saffron);
@@ -1118,11 +1118,14 @@ body.active { overflow: hidden; }
   padding: 20px 100px; 
  }
 
+ .logo-bottom{
+  margin-top: 20px;
+ }
   .branch-text{
-    margin-right: 50px;
+    /* margin-right: 50px; */
   }
   .branch-style{
-    padding-left:7% ; 
+    
     color:white; 
     letter-spacing: 15px; 
     font-size:4rem; 
@@ -1154,14 +1157,14 @@ body.active { overflow: hidden; }
   display: grid;
   gap: 20px;
   width: 100%;
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
 
 }
 
 .footer .logo {
   color: var(--rich-black-fogra-29);
   font-size: 3.2rem;
-  margin-top:30px;
+  margin-top: 30px;
   border-radius:2rem;
 }
 
@@ -1245,13 +1248,19 @@ text-align:right;
   gap: 10px;
   margin-block-end: 10px;
 }
-.footer-nav,
 .footer-brand{
   margin-left: 7%;
-
   display:flex;
   flex-direction: column;
   align-items: flex-start;
+  /* border: 1px solid var(--cultured); */
+
+}
+.footer-nav{
+  margin-left: 2px;
+  display:flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
 }
 .input-field {
   color: var(--spanish-gray);
@@ -1528,7 +1537,9 @@ textarea.input-field {
   /**
    * FOOTER
    */
-
+   .branch-style{
+    padding-left:7% ; 
+   }
   .input-wrapper { grid-template-columns: 1fr 1fr; }
   .footer-nav{
     display: flex;
@@ -1539,7 +1550,7 @@ textarea.input-field {
     padding-top:2%; 
     padding-bottom:2%; 
     display:flex;
-    width:70%;
+    width:80%;
     position: relative;
     /* border: 2px red solid; */
     
@@ -1721,10 +1732,9 @@ textarea.input-field {
 
   .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1fr; }
   .footer-brand{
-    width:70%;
+    width:80%;
     display:flex;
     flex-direction: row;
-    margin-left:7%; 
     justify-content: space-between;
     
   }
