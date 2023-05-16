@@ -210,7 +210,8 @@ body.active { overflow: hidden; }
   color: var(--white);
   font-family: var(--ff-montserrat);
   font-size: var(--fs-4);
-  font-weight: var(--fw-500);
+  font-weight: 1700;
+  font-style: italic;
   height: var(--height, 45px);
   padding-inline: var(--padding-inline, 35px);
   transition: var(--transition-1);
